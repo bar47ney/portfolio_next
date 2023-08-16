@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 async function getData() {
-  const res = await fetch("/api/posts", {
+  const res = await fetch("https://localhost:3000/api/posts", {
     // next: {revalidate: 10}
     cache: "no-store"
   });
