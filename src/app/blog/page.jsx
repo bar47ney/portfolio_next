@@ -4,7 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 async function getData() {
-  const res = await fetch(process.env.NEXTAUTH_URL + "/api/posts", {
+  const link = process.env.NEXTAUTH_URL ? process.env.NEXTAUTH_URL : "http://localhost:3000"
+  const res = await fetch(link + "/api/posts", {
     // next: {revalidate: 10}
     cache: "no-store"
   });
