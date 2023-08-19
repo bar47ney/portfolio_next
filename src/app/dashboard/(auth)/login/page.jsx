@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
+import Loader from "../../../../components/Loader/Loader";
 
 const Login = () => {
   const session = useSession();
@@ -18,7 +19,7 @@ const Login = () => {
   }, [params]);
 
   if (session.status === "loading") {
-    return <p>Loading...</p>;
+    return <Loader/>;
   }
   if (session.status === "authenticated") {
     router?.push("/dashboard");

@@ -34,7 +34,7 @@ const Category = ({ params }) => {
           <div className={styles.content}>
             <h2 className={styles.title}>{item.title}</h2>
             <p className={styles.desc}>{item.desc}</p>
-            <Button text="See More" url="#" />
+            <Button text="See More" url={item.link ? item.link : "#"} target={"_blank"}/>
           </div>
           <div className={styles.imgContainer}>
             <Image

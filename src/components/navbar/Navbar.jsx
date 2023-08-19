@@ -9,31 +9,26 @@ import { signOut, useSession } from "next-auth/react";
 const links = [
   {
     id: 1,
-    title: "Home",
-    url: "/",
-  },
-  {
-    id: 2,
     title: "Portfolio",
     url: "/portfolio",
   },
   {
-    id: 3,
+    id: 2,
     title: "Blog",
     url: "/blog",
   },
   {
-    id: 4,
+    id: 3,
     title: "About",
     url: "/about",
   },
   {
-    id: 5,
+    id: 4,
     title: "Contact",
     url: "/contact",
   },
   {
-    id: 6,
+    id: 5,
     title: "Dashboard",
     url: "/dashboard",
   },
@@ -45,7 +40,7 @@ const Navbar = () => {
   return (
     <div className={styles.container}>
       <Link className={styles.logo} href="/">
-        Lamania
+        Portfolio
       </Link>
       <nav className={styles.links}>
         <DarkModeToggle />
